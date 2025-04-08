@@ -12,7 +12,7 @@
     ```bash
     sudo docker container run -d -p 8080:80 --name 116fcproyecto2 -v "$PWD":/usr/share/nginx/html 116fcproyecto1:1.0
     ```
-    > `$PWD` significa desde el directorio que pide la actividad, en este caso desde el host en ese directorio.
+    > `-v "$PWD":/usr/share/nginx/html` monta el directorio actual del host ($`PWD`) en el directorio del contenedor donde nginx sirve los archivos.
 
 - **Paso 3.** Comprobación: Accede al sitio web en [http://localhost:8080](http://localhost:8080) para ver el sitio en ejecución.
     ```bash
